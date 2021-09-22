@@ -31,8 +31,8 @@ namespace devexpress_pdf
         private void OnDocxToPdf(object o)
         {
             var assembly = GetType().Assembly;
-            var resourceName = $"devexpress_pdf.high-def.docx";
-            Stream stream = assembly.GetManifestResourceStream(resourceName);
+
+            Stream stream = assembly.GetManifestResourceStream("devexpress_pdf.res.high-def.docx");
             Byte[] bytes;
             using (var reader = new BinaryReader(stream))
             {
