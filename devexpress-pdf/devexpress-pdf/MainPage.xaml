@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:devexpress_pdf"
              x:Class="devexpress_pdf.MainPage">
-
+    <ContentPage.BindingContext>
+        <local:BindingContext />
+    </ContentPage.BindingContext>
     <StackLayout>
         <Button Text="Docx to PDF"
-                Command="{Binding DocxToPdfCommand}"/>
+                Command="{Binding DocxToPdfCommand}"
+                VerticalOptions="EndAndExpand"
+                Padding="6"/>
     </StackLayout>
-
 </ContentPage>

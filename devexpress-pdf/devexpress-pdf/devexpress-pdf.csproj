@@ -12,7 +12,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="DevExpress.RichEdit.v21.1.Core">
+      <HintPath>C:\Program Files (x86)\DevExpress 21.1\Components\Bin\Standard\DevExpress.RichEdit.v21.1.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
 </Project>
