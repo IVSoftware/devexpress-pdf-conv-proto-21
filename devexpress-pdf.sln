@@ -28,8 +28,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D7D8EFB0-AA35-4ACE-88C7-673852EA3957}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{D7D8EFB0-AA35-4ACE-88C7-673852EA3957}.Debug|Any CPU.Build.0 = Debug|x86
-		{D7D8EFB0-AA35-4ACE-88C7-673852EA3957}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{D7D8EFB0-AA35-4ACE-88C7-673852EA3957}.Debug|ARM.ActiveCfg = Debug|ARM
 		{D7D8EFB0-AA35-4ACE-88C7-673852EA3957}.Debug|ARM.Build.0 = Debug|ARM
 		{D7D8EFB0-AA35-4ACE-88C7-673852EA3957}.Debug|ARM.Deploy.0 = Debug|ARM
@@ -100,7 +98,6 @@ Global
 		{071F3C84-144C-418B-B6E6-AE294E0F95E8}.Release|x86.Build.0 = Release|Any CPU
 		{071F3C84-144C-418B-B6E6-AE294E0F95E8}.Release|x86.Deploy.0 = Release|Any CPU
 		{07C1FECB-7143-45C4-953B-62A110B1A753}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{07C1FECB-7143-45C4-953B-62A110B1A753}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{07C1FECB-7143-45C4-953B-62A110B1A753}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{07C1FECB-7143-45C4-953B-62A110B1A753}.Debug|ARM.ActiveCfg = Debug|iPhone
 		{07C1FECB-7143-45C4-953B-62A110B1A753}.Debug|ARM.Build.0 = Debug|iPhone

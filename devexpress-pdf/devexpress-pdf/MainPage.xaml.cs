@@ -1,7 +1,9 @@
-﻿using DevExpress.XtraRichEdit;
+﻿using DevExpress.XtraPrinting;
+using DevExpress.XtraRichEdit;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
@@ -28,13 +30,27 @@ namespace devexpress_pdf
         public ICommand DocxToPdfCommand { get; }
         private void OnDocxToPdf(object o)
         {
-            byte[] bytes;
-            using (WebClient myWebClient = new WebClient())
+            var assembly = GetType().Assembly;
+            var resourceName = $"devexpress_pdf.high-def.docx";
+            Stream stream = assembly.GetManifestResourceStream(resourceName);
+            Byte[] bytes;
+            using (var reader = new BinaryReader(stream))
             {
-                // Download the Web resource and save it into a data buffer.
-                bytes = myWebClient.DownloadData("https://www.ivsoftware.com/proto-21/high-def.docx");
+                bytes = reader.ReadBytes((int)stream.Length);
             }
-            RichEditDocumentServer wordProcessor = new RichEditDocumentServer();
+            RichEditDocumentServer conversionServer = new RichEditDocumentServer();
+
+            //Specify export options:
+            PdfExportOptions options = new PdfExportOptions();
+            options.DocumentOptions.Author = "Anonymous";
+            options.Compressed = false;
+            options.ImageQuality = PdfJpegImageQuality.Highest;
+
+            //Export the document to the stream:
+            using (MemoryStream pdfFileStream = new MemoryStream(bytes))
+            {
+                conversionServer.ExportToPdf(pdfFileStream, options);
+            }
             { }
         }
         public event PropertyChangedEventHandler PropertyChanged;
